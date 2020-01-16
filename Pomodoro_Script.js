@@ -38,7 +38,8 @@ stop25Button.addEventListener('click', function(e){
 
 const reset25Button = document.getElementById('reset25Button');
 reset25Button.addEventListener('click', function(e){
-  Reset25Timer();
+  clearInterval(x);
+  document.getElementById("twentyFive").innerHTML = "25:00";
 });
 
 
