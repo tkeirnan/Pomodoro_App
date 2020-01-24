@@ -4,6 +4,8 @@ let WorkTimerTime;
 let RestTimerTime;
 let splitStopped25Timer;
 let splitStopped5timer;
+const baseballSound = document.querySelector("#baseball");
+const gettoworkSound = document.querySelector("#gettowork");
 
 const start25Button = document.getElementById('start25Button');
 const start5Button = document.getElementById('start5Button');
@@ -40,6 +42,7 @@ start25Button.addEventListener('click', function(e) {
     if (distance < 0) {
       clearInterval(x);
       document.getElementById("twentyFive").innerHTML = "Time to take a break!";
+      baseballSound.play();
     }
   }, 1000);
 });
@@ -86,6 +89,7 @@ start5Button.addEventListener('click', function(e) {
     if (distance < 0) {
       clearInterval(y);
       document.getElementById("five").innerHTML = "Time to get to work!";
+      gettoworkSound.play();
     }
   }, 1000);
 });
